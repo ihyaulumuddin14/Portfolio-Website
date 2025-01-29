@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #776443;
+    --secondary-color: #B6C7AA;
+    --background-color: #fffaf3;
+    --text-color: #3C3D37;
+    --hover-color: #a0937d4e;
+    --border-color: #ffffff;
+    --shadow-color:#3c3d376f;
+}
+
+.dark-mode {
+    --primary-color: #ECDFCC;
+    --secondary-color: #5a6457;
+    --background-color: #181C14;
+    --text-color: #EEEEEE;
+    --hover-color: #ecdfcc4f;
+    --border-color: #000;
+    --shadow-color: #eeeeee57;
+}
+
+#work {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 150px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+#work h1 {
+    font-family: 'Roboto', serif;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.project-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: auto; /* Agar tidak terlalu lebar di layar besar */
+    padding: 20px;
+    columns: 300px;
+}
+
+.project-container > div {
+    width: auto;
+    height: 400px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    padding: 20px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.project-container > div:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.img-prj-ctr {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-prj-ctr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s ease;
+}
+
+.img-prj-ctr i {
+    position: absolute;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    opacity: 0;
+    transition: .2s ease;
+    z-index: 1;
+}
+
+.project-container h5 {
+    margin: 20px 0 10px 0;
+    font-family: 'Poppins', serif;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: .2s ease;
+}
+
+.img-prj-ctr:hover > i {
+    opacity: 1;
+}
+
+.img-prj-ctr:hover > img {
+    filter: brightness(.5);
+    transform: scale(1.1);
+}
+
+.img-prj-ctr:hover + h5 {
+    transform: translateX(20px)
+}
+
+
+.project-container p {
+    font-family: 'Poppins', serif;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.custom-shape-divider-bottom-1738139500 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom-1738139500 svg {
+    position: relative;
+    display: block;
+    width: calc(209% + 1.3px);
+    height: 254px;
+}
+
+.custom-shape-divider-bottom-1738139500 .shape-fill {
+    fill: #5a6457;
+}

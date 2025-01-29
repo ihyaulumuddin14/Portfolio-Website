@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #776443;
+    --secondary-color: #B6C7AA;
+    --background-color: #fffaf3;
+    --text-color: #3C3D37;
+    --hover-color: #a0937d4e;
+    --border-color: #ffffff;
+    --shadow-color:#3c3d376f;
+}
+
+.dark-mode {
+    --primary-color: #ECDFCC;
+    --secondary-color: #5a6457;
+    --background-color: #181C14;
+    --text-color: #EEEEEE;
+    --hover-color: #ecdfcc4f;
+    --border-color: #000;
+    --shadow-color: #eeeeee57;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    backdrop-filter: brightness(90%) blur(5px);
+    z-index: 999;
+}
+
+nav h1 {
+    font-family: 'Roboto', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 50px;
+    position: relative;
+    left: -50px;
+}
+
+nav ul::before {
+    position: absolute;
+    content: "";
+    background-color: var(--primary-color);
+    z-index: -1;
+    width: 25%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+nav ul label {
+    color: var(--text-color);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Poppins', serif;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+nav ul label:hover {
+    background-color: var(--hover-color);
+}
+
+.nav-active {
+    color: var(--background-color);
+}
+
+nav input {
+    display: none;
+}
+
+#homeR:checked ~ ul::before {
+    left: 0%;
+}
+#aboutR:checked ~ ul::before {
+    left: 25%;
+}
+#workR:checked ~ ul::before {
+    left: 50%;
+}
+#contactR:checked ~ ul::before {
+    left: 75%;
+}
+
+#home {
+    scroll-margin-top: 100px;
+}
+#about {
+    scroll-margin-top: 50px;
+}
+#work {
+    scroll-margin-top: 80px;
+}
+#contact {
+    scroll-margin-top: 80px;
+}
+
+.theme-toggle {
+    height: 30px;
+    width: 58px;
+    border: 2px solid var(--border-color);
+    box-shadow: inset 0px 0px 3px 2px var(--shadow-color), 0px 0px 3px 2px var(--shadow-color);
+    border-radius: 30px;
+    padding: 0 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-toggle .circle {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
