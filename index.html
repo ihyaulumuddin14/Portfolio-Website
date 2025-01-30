@@ -10,11 +10,18 @@
     <link rel="stylesheet" href="src/styles/home.css">
     <link rel="stylesheet" href="src/styles/about.css">
     <link rel="stylesheet" href="src/styles/work.css">
-    <link rel="stylesheet" href="src/styles/quotes.css">
+    <link rel="stylesheet" href="src/styles/trendy.css">
+    <link rel="stylesheet" href="src/styles/contact.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <button class="scroll-up" style="opacity: 0;">
+        <i class='bx bxs-arrow-to-top' ></i>
+    </button>
+    
     <div class="container">
         <!-- Navigation Bar -->
         <nav>
@@ -23,7 +30,7 @@
             <input type="radio" name="nav" id="homeR" value="home">
             <input type="radio" name="nav" id="aboutR" value="about">
             <input type="radio" name="nav" id="workR" value="work">
-            <input type="radio" name="nav" id="contactR" value="contact">
+            <input type="radio" name="nav" id="contactR" value="email-form">
 
             <ul>
                 <label for="homeR" class="nav-active">Home</label>
@@ -38,12 +45,12 @@
                     <i class='bx bx-moon' style="display: none;"></i>
                 </div>
             </div>
-
+<!-- 
             <div class="hamburger-container" style="display: none;">
                 <div class="hamburger">
                     <i class='bx bx-menu' ></i>
                 </div>
-            </div>
+            </div> -->
         </nav>
 
         <!-- Hero Section -->
@@ -58,7 +65,7 @@
                             Let's Connect
                         </button>
                     </a>
-                    <a href="">Read More<i class='bx bx-down-arrow-alt'></i></a>
+                    <a href="#about">Read More<i class='bx bx-down-arrow-alt'></i></a>
                 </div>
             </div>
 
@@ -71,10 +78,6 @@
                     <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
                 </svg>
             </div>
-
-            <!-- <div class="scroll-up" style="display: none;">
-                <i class='bx bx-chevrons-up' ></i>
-            </div> -->
         </section>
 
         <main>
@@ -199,8 +202,8 @@
                 </div>
             </section>
     
-            <!-- Random Quotes -->
-            <section id="quotes">
+            <!-- My Trendy Work -->
+            <section id="trendy">
                 <div class="custom-shape-divider-top-1738139630">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                         <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -209,87 +212,75 @@
                     </svg>
                 </div>
 
-                <h4>(Random Quotes)</h4>
-    
-                <div class="quotes-container">
-                    <i class='bx bxs-left-arrow-circle' id="prev-btn"></i>
-                    <i class='bx bxs-right-arrow-circle' id="next-btn"></i>
-
-                    <input type="radio" name="quote" id="car1">
-                    <input type="radio" name="quote" id="car2">
-                    <input type="radio" name="quote" id="car3">
-                    <input type="radio" name="quote" id="car4">
-                    <input type="radio" name="quote" id="car5">
-
-                    <div class="indicator">
-                        <label for="car1" class="active-indicator"></label>
-                        <label for="car2"></label>
-                        <label for="car3"></label>
-                        <label for="car4"></label>
-                        <label for="car5"></label>
-                    </div>
-
-                    <div class="article-container">
-                        <article>
-                            <div class="img"><i class='bx bxs-user-circle' ></i></div>
-                            <p>Hidup di masa lalu akan terjebak dengan kata seandainya, hidup di masa depan akan terjebak dengan kata bagaimana, hidup di masa sekarang membuat usahamu lebih bermakna</p>
-                            <div><i class='bx bxs-quote-left' ></i></div>
-                        </article>
-                        <article>
-                            <div class="img"><i class='bx bxs-user-circle' ></i></div>
-                            <p>Terlalu banyak tertawa merubah sifat asli manusia, tertawalah di waktu yang tepat</p>
-                            <div><i class='bx bxs-quote-left' ></i></div>
-                        </article>
-                        <article>
-                            <div class="img"><i class='bx bxs-user-circle' ></i></div>
-                            <p>Istirahat juga bagian dari produktivitas</p>
-                            <div><i class='bx bxs-quote-left' ></i></div>
-                        </article>
-                        <article>
-                            <div class="img"><i class='bx bxs-user-circle' ></i></div>
-                            <p>Kemajuan tetaplah kemajuan, meskipun hanya sedikit</p>
-                            <div><i class='bx bxs-quote-left' ></i></div>
-                        </article>
-                        <article>
-                            <div class="img"><i class='bx bxs-user-circle' ></i></div>
-                            <p>Sangat wajar ketika banyak hal tidak terjadi secara sempurna, bahkan terlalu mustahil untuk manusia</p>
-                            <div><i class='bx bxs-quote-left' ></i></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- My Trendy Work -->
-            <section>
                 <h1>My Trendy Work</h1>
-    
-                <div class="book-cover">
-                    <img src="src/images/BooksCover.png" alt="C-10 Garcia Book Cover">
+                
+                <div class="trendy-grid">
+                    <div class="book-cover">
+                        <div class="card">
+                            <img src="src/images/BooksCover.png" alt="C-10 Garcia Book Cover" class="cover-front">
+                            <img src="src/images/Cover Belakang.png" alt="C-10 Garcia Book Cover" class="cover-back">
+                        </div>
+                    </div>
+                    
+                    <div class="description-book">
+                        <h5 class="book-title">C10 GARCIA</h5>
+                        <!-- <p>by Ihya' Ulumuddin</p> -->
+                        
+                        <p>Get ready for a spooky adventure with C-10 GARCIA! Cio, an inquisitive student, finds herself entangled in a series of mysterious and supernatural occurrences at his new school. Join her as he uncovers the secrets hidden behind the school's classrooms. Written in a lighthearted and engaging Javanese style, this novel is a fun and thrilling read for those who enjoy a touch of the supernatural.</p>
+                        
+                        <a href="https://drive.google.com/file/d/1lNM3z76AMOR1Xk9cKRFNkVXc9k2niksk/view?usp=sharing" target="_blank">Want to Read <i class='bx bx-bookmark'></i></a>
+                    </div>
                 </div>
     
-                <div class="decription-book">
-                    <h5 class="book-title">C10 GARCIA</h5>
-                    <p>by Ihya' Ulumuddin</p>
-    
-                    <p>Get ready for a spooky adventure with C-10 GARCIA! Cio, a curious student, finds himself entangled in a series of mysterious and supernatural events at his new school. Join him as he unravels the secrets hidden within the school walls.</p>
-    
-                    <a href="https://drive.google.com/file/d/1lNM3z76AMOR1Xk9cKRFNkVXc9k2niksk/view?usp=sharing">Get Free</a>
+                <div class="custom-shape-divider-bottom-1738197138">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+                    </svg>
                 </div>
             </section>
-    
+
             <!-- Big Anchor -->
             <section id="contact">
+                <div class="custom-shape-divider-top-1738197056">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+
                 <a href="#email-form">Let's Talk</a>
     
                 <article id="email-form">
                     <div>
-                        <h4>Contact Me</h4>
-                        <p>Have a great project in mind? Reach out.</p>
-    
+                        <h1>Contact Me</h1>
+                        
                         <div class="contact">
+                            <p>I welcome your feedback and inquiries. Please complete the form to submit your comments or questions.</p>
                             <p><i class='bx bxs-envelope' ></i> ulumuddinihya022@gmail.com</p>
                             <p><i class='bx bxs-map' ></i> Malang, East Java</p>
                         </div>
+                    </div>
+
+                    <div>
+                        <form action="https://api.web3forms.com/submit" method="POST" target="_blank">
+                            <h1>Feedback!</h1>
+
+                            <input type="hidden" name="access_key" value="7398f56d-31f4-43e6-9f2d-fb9c43c6816b">
+
+                            <div class="name">
+                                <input type="text" name="name" id="name-input" required>
+                                <label for="name-input">Name</label>
+                            </div>
+                            <div class="email">
+                                <input type="email" name="email" id="email-input" required>
+                                <label for="email-input" id="valid-email">Email</label>
+                            </div>
+                            <div class="message">
+                                <textarea id="textarea" cols="30" rows="10" name="message" id="textarea" required></textarea>
+                                <label for="textarea">Message</label>
+                            </div>
+                            <button type="submit">Send</button>
+                            <p>Your feedback helps me become a better developer. <strong>Thank you!</strong></p>
+                        </form>
                     </div>
                 </article>
             </section>
@@ -297,25 +288,25 @@
             <footer>
                 <div class="footer-container">
                     <div class="upper">
-                        <h2>Ihya' Ulumuddin</h2>
+                        <h2>Social Media</h2>
         
                         <div class="social-media">
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
+                            <a href="https://www.instagram.com/uund14/"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/ihya-ulumuddin-3a2092317/"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://www.youtube.com/@ihyaulumuddin957"><i class='bx bxl-youtube' ></i></a>
+                            <a href="https://github.com/ihyaulumuddin14"><i class='bx bxl-github' ></i></a>
                         </div>
                     </div>
         
-                    <hr>
-        
-                    <p>Made with ❤️ by Ihya' Ulumuddin</p>
+                    <div>
+                        <p>Made with ❤️ by Ihya' Ulumuddin</p>
+                    </div>
                 </div>
             </footer>
 
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

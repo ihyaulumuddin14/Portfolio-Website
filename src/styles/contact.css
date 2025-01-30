@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #776443;
+    --secondary-color: #B6C7AA;
+    --background-color: #fffaf3;
+    --text-color: #3C3D37;
+    --hover-color: #a0937d4e;
+    --border-color: #ffffff;
+    --shadow-color:#3c3d376f;
+}
+
+.dark-mode {
+    --primary-color: #ECDFCC;
+    --secondary-color: #5a6457;
+    --background-color: #181C14;
+    --text-color: #EEEEEE;
+    --hover-color: #ecdfcc4f;
+    --border-color: #000;
+    --shadow-color: #eeeeee57;
+}
+
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.custom-shape-divider-top-1738197056 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1738197056 svg {
+    position: relative;
+    display: block;
+    width: calc(229% + 1.3px);
+    height: 172px;
+    z-index: -1;
+    transform: translateY(-2px);
+}
+
+.custom-shape-divider-top-1738197056 .shape-fill {
+    fill: var(--shadow-color);
+}
+
+#contact > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6rem;
+    color: var(--background-color);
+    padding: 25px 150px;
+    background-color: var(--text-color);
+    border-radius: 60px;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: 3px solid transparent;
+    z-index: 1;
+}
+
+#contact > a:hover {
+    border: 3px solid var(--background-color);
+}
+
+#email-form {
+    width: 100%;
+    max-height: 700px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+#email-form h1 {
+    margin-bottom: 20px;
+}
+
+#email-form div:first-child {
+    padding-left: 100px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#email-form div:first-child h1 {
+    font-size: 3rem;
+}
+
+.contact {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact p:first-child {
+    margin-bottom: 30px;
+}
+
+#email-form > div:last-child {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+}
+
+form {
+    width: 100%;
+    height: max-content;
+    background-color: #e8f0fe;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+
+form:hover > h1 {
+    transform: translateX(40px) scale(1.2);
+}
+
+form h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+form .name, form .email {
+    border-radius: 30px;
+    height: 50px;
+    position: relative;
+}
+
+form .message {
+    border-radius: 30px;
+    height: 200px;
+    position: relative;
+}
+
+form label {
+    cursor:text;
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    padding: 0 10px;
+}
+
+.message label {
+    top: 15%;
+}
+
+form input {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid var(--text-color);
+    outline: none;
+    padding: 0 7%;
+    background-color: transparent;
+}
+
+form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px transparent inset !important;
+}
+
+form input:focus + label,
+form input:not(:placeholder-shown) + label {
+    transform: translateY(-35px) scale(.8);
+    background-color: #e8f0fe;
+}
+
+form textarea:focus + label,
+form textarea:not(:placeholder-shown) + label {
+    transform: translateY(-40px) scale(.8);
+    background-color: #e8f0fe;
+}
+
+form textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 4% 7%;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border-radius: 30px;
+    border: 1px solid var(--text-color);
+    outline: none;
+    background-color: transparent;
+}
+
+form button {
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--border-color);
+    font-family: 'Poppins', sans-serif;
+    transition: all .1s ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+form button:active {
+    transform: scale(0.99);
+}
+
+form p {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 20px;
+}

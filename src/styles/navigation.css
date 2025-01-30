@@ -26,7 +26,7 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
-    backdrop-filter: brightness(90%) blur(5px);
+    backdrop-filter: brightness(2) blur(5px);
     z-index: 999;
 }
 
@@ -34,13 +34,12 @@ nav h1 {
     font-family: 'Roboto', serif;
     font-weight: 700;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    /* border: 1px solid black; */
     width: 400px;
     height: 50px;
     position: relative;
@@ -60,6 +59,7 @@ nav ul::before {
 
 nav ul label {
     color: var(--text-color);
+    font-weight: 500;
     width: 25%;
     height: 100%;
     display: flex;
@@ -105,13 +105,11 @@ nav input {
 #work {
     scroll-margin-top: 80px;
 }
-#contact {
-    scroll-margin-top: 80px;
-}
 
 .theme-toggle {
     height: 30px;
     width: 58px;
+    background-color: var(--background-color);
     border: 2px solid var(--border-color);
     box-shadow: inset 0px 0px 3px 2px var(--shadow-color), 0px 0px 3px 2px var(--shadow-color);
     border-radius: 30px;

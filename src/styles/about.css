@@ -59,7 +59,10 @@ main {
     height: 100%;
     z-index: -1;
     background-position: center;
-    background-image: radial-gradient(49% 81% at 45% 47%, #ECDFCC 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #fffaf3 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #B6C7AA 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #a0937d4e 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #776443 0%, #776443 100%);
+    background-color: #DCD9D4;
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+ background-blend-mode: soft-light,screen;
+    /* background-image: radial-gradient(49% 81% at 45% 47%, #ECDFCC 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #fffaf3 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #B6C7AA 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #a0937d4e 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #776443 0%, #776443 100%); */
     animation: background-move 10s ease-in-out infinite alternate both;
 }
 

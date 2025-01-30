@@ -51,7 +51,7 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         } else {
-            entry.target.classList.remove("show"); // Hapus animasi saat keluar viewport
+            entry.target.classList.remove("show");
         }
     });
 });
@@ -59,41 +59,34 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".progress span").forEach(el => observer.observe(el));
 
 
-const indicators = document.querySelectorAll('.quote-container input')
-const prevBtn = document.getElementById('prev-btn')
-const nextBtn = document.getElementById('next-btn')
-const quotesContainer = document.querySelector('.article-container')
 
-let currentIndicatorIndex = 0
-let autoSlideInterval;
+//scrol-up
+const container = document.querySelector(".container");
+const scrollUpContent = document.querySelector('.scroll-up');
+const aboutSection = document.getElementById('about');
+const aboutPosition = aboutSection.getBoundingClientRect().top + window.scrollY;
 
-function updateCarousel() {
-    quotesContainer.style.transform = `translateX(-${currentIndicatorIndex * 25}%)`
+let calcScrollValue = () => {
+    let pos = container.scrollTop;
+    let opacity = pos / aboutPosition;
+    
+    if (opacity > 1) {
+        opacity = 1
+        scrollUpContent.removeAttribute('disabled')
+        scrollUpContent.style.cursor = 'pointer';
+    } else {
+        scrollUpContent.setAttribute('disabled', true)
+        scrollUpContent.style.cursor = 'default';
+    }
 
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('.active-indicator', index == currentIndicatorIndex)
+    scrollUpContent.addEventListener('click', () => {
+        const targetSection = document.getElementById('home');
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     })
-}
+    
+    scrollUpContent.style.opacity = opacity;
+};
 
-function nextSlide() {
-    currentIndicatorIndex = (currentIndicatorIndex + 1) % 5
-    updateCarousel()
-    console.log(currentIndicatorIndex)
-}
 
-function prevSlide() {
-    currentIndicatorIndex = (currentIndicatorIndex - 1 + 5) % 5
-    console.log(currentIndicatorIndex)
-}
-
-function autoResetSlide() {
-    clearInterval(autoSlideInterval)
-    autoSlideInterval = setInterval(() => {
-        nextSlide()
-    }, 5000)
-}
-
-nextBtn.addEventListener('click', nextSlide)
-prevBtn.addEventListener('click', prevSlide)
-
-autoSlideInterval = setInterval(nextSlide, 5000)
+container.addEventListener("scroll", calcScrollValue);
+container.addEventListener("load", calcScrollValue);
