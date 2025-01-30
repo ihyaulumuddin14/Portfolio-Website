@@ -22,7 +22,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: max-content;
     width: 100%;
 }
 
@@ -71,8 +71,7 @@
 
 #email-form {
     width: 100%;
-    max-height: 700px;
-    height: 100vh;
+    height: max-content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 50px;
@@ -170,10 +169,6 @@ form input {
     background-color: transparent;
 }
 
-form input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 100px transparent inset !important;
-}
-
 form input:focus + label,
 form input:not(:placeholder-shown) + label {
     transform: translateY(-35px) scale(.8);
@@ -224,4 +219,87 @@ form p {
     font-size: .8rem;
     text-align: center;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    #email-form {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+    }
+
+    #email-form div:first-child {
+        padding: 40px;
+    }
+    
+    #email-form div:last-child {
+        justify-content: center;
+        padding: 50px;
+    }
+    
+    #email-form > h1 {
+        margin-left: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form .name, form .email {
+        height: 40px;
+    }
+
+    form .message {
+        height: 150px;
+    }
+
+    form input {
+        padding: 0 5%;
+    }
+
+    form textarea {
+        padding: 4% 5%;
+    }
+
+    form button {
+        height: 30px;
+    }
+
+    form p {
+        font-size: .7rem;
+    }
+
+    form input:focus + label,
+form input:not(:placeholder-shown) + label {
+    transform: translateY(-33px) scale(.6);
+    background-color: #e8f0fe;
+}
+
+form textarea:focus + label,
+form textarea:not(:placeholder-shown) + label {
+    transform: translateY(-35px) scale(.6);
+    background-color: #e8f0fe;
+}
+}
+
+@media screen and (max-width:768px) {
+    #email-form {
+        grid-template-columns: 1fr;
+    }
+
+    #email-form div:last-child {
+        max-width: 100%;
+    }
+
+    .contact {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #contact > a {
+        width: 70%;
+        font-size: .9rem;
+        padding: 20px 0;
+        text-align: center;
+    }
 }

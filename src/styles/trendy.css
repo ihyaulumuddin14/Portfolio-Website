@@ -20,7 +20,7 @@
 
 #trendy {
     position: relative;
-    min-height: 100vh;
+    height: max-content;
     width: 100%;
     padding: 100px;
 }
@@ -181,4 +181,80 @@
 
 .custom-shape-divider-bottom-1738197138 .shape-fill {
     fill: var(--shadow-color);
+}
+
+@media screen and (max-width: 1280px) {
+    #trendy {
+        padding: 50px;
+    }
+
+    .trendy-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .book-cover {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .description-book {
+        padding: 40px;
+    }
+
+    .description-book h5 {
+        font-size: 1.5rem;
+    }
+
+    .description-book p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .description-book {
+        padding: 20px 40px;
+        height: max-content;
+    }
+
+    .description-book h5 {
+        font-size: 1.2rem;
+    }
+
+    .description-book p {
+        font-size: .7rem;
+    }
+
+    .book-cover, .book-cover img {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #trendy {
+        padding: 50px;
+    }
+
+    .trendy-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .description-book {
+        padding: 20px;
+    }
+
+    .description-book h5 {
+        font-size: 1rem;
+    }
+
+    .description-book p {
+        font-size: .6rem;
+    }
+
+    .book-cover, .book-cover img {
+        width: 200px;
+        height: 300px;
+    }
 }

@@ -31,20 +31,6 @@ navBtn.forEach(nav => {
     
 })
 
-themeToggle.addEventListener('click', () => {
-    bodyTag.classList.toggle('dark-mode')
-
-    if (bodyTag.classList.contains('dark-mode')) {
-        themeCircle.style.transform = 'translateX(150%)'
-        lightIcon.style.display = 'none'
-        darkIcon.style.display = 'inline'
-    } else {
-        themeCircle.style.transform = 'translateX(0%)'
-        lightIcon.style.display = 'inline'
-        darkIcon.style.display = 'none'
-    }
-})
-
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

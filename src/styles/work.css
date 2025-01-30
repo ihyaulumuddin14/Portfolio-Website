@@ -20,8 +20,8 @@
 
 #work {
     width: 100%;
-    min-height: 100vh;
-    padding: 50px 150px 50px 100px;
+    height: 100%;
+    padding: 50px 100px 50px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,4 +142,14 @@
 
 .custom-shape-divider-bottom-1738139500 .shape-fill {
     fill: #5a6457;
+}
+
+@media screen and (max-width:576px) {
+    #work {
+        padding: 50px 20px;
+    }
+
+    #work h1 {
+        text-align: center;
+    }
 }

@@ -67,3 +67,22 @@ footer .upper {
     text-align: center;
     color: var(--background-color);
 }
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 576px) { 
+    div.upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        grid-template-columns: 1fr;
+        font-size: .8rem;
+    }
+
+    
+}

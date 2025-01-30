@@ -35,15 +35,17 @@ nav h1 {
     font-weight: 700;
     font-size: 2rem;
     color: var(--text-color);
+    margin-right: 20px;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    width: 400px;
+    max-width: 400px;
+    width: 80%;
     height: 50px;
     position: relative;
-    left: -50px;
+    /* left: -50px; */
 }
 
 nav ul::before {
@@ -118,6 +120,7 @@ nav input {
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+
 }
 
 .theme-toggle .circle {
@@ -133,4 +136,23 @@ nav input {
 .theme-toggle i {
     font-size: 1.2rem;
     color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 40px;
+    }
+
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        max-width: 300px;
+        max-height: 30px;
+    }
+
+    nav ul label {
+        font-size: .6rem;
+    }
 }
