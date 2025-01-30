@@ -276,3 +276,24 @@
         top: -80px;
     }
 }
+
+@media screen and (max-width:448) {
+    .left-home {
+        width: 70px;
+    }
+
+    #home {
+        padding: 10px;
+    }
+    
+    #home .left-home p {
+        width: 70%;
+        font-size: .2rem;
+        position: relative;
+        transform: translateY(-90px);
+    }
+
+    .right-home {
+        display: none;
+    }
+}
